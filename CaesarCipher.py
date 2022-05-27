@@ -32,7 +32,8 @@ class CaesarCipher:
 if __name__ == '__main__' :
     cipShift = CaesarCipher()                                  #Cipher will shift the amount of times you enter in the parameters, if not it will shift to 3 by default
     userMessage= input("Enter your message in all caps to be encrypted: ")
-    enMessage = cipShift.encrypt(userMessage)
+    UpperMessage = userMessage.upper()                          #Will change your message to be all caps to continue 
+    enMessage = cipShift.encrypt(UpperMessage)
     print('Encrypted your message is: ', enMessage)
     deMessage = cipShift.decrypt(enMessage)
     print('Decrypted your message is: ', deMessage)
